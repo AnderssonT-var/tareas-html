@@ -1,0 +1,39 @@
+html{
+    background-color: antiquewhite;
+}
+
+#print{
+    color: azure;
+    text-align: center;
+    background-color: brown;
+    
+}
+p{
+    color: rgb(4, 0, 233);
+    text-align: justify;
+    border: 12%;
+    
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    color: rgb(0, 0, 0);
+    margin: 2px;
+    padding: 2px;
+    background-color: ;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+
+ol{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;  
+    height: 10px;  
+}
