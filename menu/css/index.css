@@ -1,13 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    
+
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     background-image: url(/menu/img/pexels-kindel-media-8566568.jpg);
@@ -15,38 +15,131 @@ body{
     background-size: cover;
 }
 
-nav{
+.Servicios {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/menu/img/pexels-cottonbro-6153344.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.Galeria {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/menu/img/pexels-pavel-danilyuk-8438865.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.Nosotros {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/menu/img/pexels-tara-winstead-8386434.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.Contactos {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/menu/img/pexels-cottonbro-6153740.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
     background-color: brown;
     height: 80px;
     width: 100%;
 }
 
-.enlace{
+.enlace {
     position: absolute;
     padding: 10px 50px;
 }
 
-.logo{
+.logo {
     height: 60px;
     width: 60px;
 }
 
-nav ul{
+nav ul {
     padding-left: 25%;
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     line-height: 50px;
     margin: 0 10px;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     font-size: 15px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
     background-color: black;
+}
+
+li a.active,
+li a:hover {
+    background: #4c4c4c;
+    transition: .5s;
+}
+
+.checkbt {
+    font-size: 30px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* EFECTO RESPONSIVE MEDIDAS QUERY*/
+
+@media(max-width: 858px) {
+    .checkbt {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 0, 0);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 39px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /*
+    li a:hover, li a.active{
+        background: none;
+        color: #4c4c4c;
+    }
+    */
+    #check:checked~ul {
+        left: 0;
+    }
 }
