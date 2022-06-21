@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+nav {
+    background-color: #0f1c21;
+    height: 80px;
+    width: 100%;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/tarea_4/img/imgFondo\ \(1\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+.galeria{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/tarea_4/img/imgFondo\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+.enlace {
+    position: absolute;
+    padding: 10px 50px;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+nav ul {
+    padding-left: 25%;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 13px 10px 5px 9px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a {
+    color: #266028;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+    background: #2e3b3f;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: rgb(220, 220, 220);
+    float: right;
+    line-height: 80px;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+/********SLIDE*******/
+.slider{
+    width: 90;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slid 10s infinite alternate-reverse;
+}
+.slider li{
+    opacity: 10s;
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    margin: 8% 0% 0% 30%;
+    border-radius: 50px;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #266028;
+    width: 40%;
+}
+/*Slider animacion*/
+@keyframes slid {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+/********************/
+
+/* EFECTO RESPONSIVE MEDIDAS QUERY*/
+
+@media(max-width: 858px) {
+    .checkbtn{
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0f1c21;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 100px 50px 50px ;
+        line-height: 39px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    /*
+    li a:hover, li a.active{
+        background: none;
+        color: #4c4c4c;
+    }
+    */
+    #check:checked~ul {
+        left: 0;
+    }
+}
